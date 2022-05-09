@@ -1,3 +1,4 @@
+import { send } from 'express/lib/response';
 import Sequelize from 'sequelize';
 import {connection} from '../database/connection.js'
 
@@ -40,7 +41,13 @@ export const filmes = connection.define('filmes', {
 } )
 
 const initTable = async () => {
+try{ 
     await filmes.sync()
+
+}
+catch(error){
+    error.message
+}
 }
 
 initTable();
