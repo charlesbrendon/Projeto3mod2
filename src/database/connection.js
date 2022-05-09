@@ -12,10 +12,9 @@ export const connection = new Sequelize(
     //     port: 5432,//Porta que está o banco de dados
     //     dialect: 'postgres' //Qual banco de dados o Sequelize está trabalhando
     // }
-
-    'postgres://locadora_w0k0_user:ugoGNkCeJn7qI6DJiPczZy2MSpIK4uf6@dpg-c9sorksobjdcmd60p270-a.oregon-postgres.render.com/locadora_w0k0',
+    process.env.DB_URL,
+    //'postgres://locadora_w0k0_user:ugoGNkCeJn7qI6DJiPczZy2MSpIK4uf6@dpg-c9sorksobjdcmd60p270-a.oregon-postgres.render.com/locadora_w0k0',
     {
-        
         dialect: 'postgres',
         dialectOptions: {
             ssl: {

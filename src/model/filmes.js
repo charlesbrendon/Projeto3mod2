@@ -1,4 +1,3 @@
-import { send } from 'express/lib/response';
 import Sequelize from 'sequelize';
 import {connection} from '../database/connection.js'
 
@@ -46,7 +45,7 @@ try{
 
 }
 catch(error){
-    error.message
+   return error.message
 }
 }
 
