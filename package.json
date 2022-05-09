@@ -5,9 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "test": "jest",
     "dev": "nodemon -e js,html,ejs,css",
     "start": "node.js"
+    
   },
   "author": "Charles",
   "license": "ISC",
