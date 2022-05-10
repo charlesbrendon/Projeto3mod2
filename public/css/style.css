@@ -267,6 +267,7 @@ legend {
 }
 
 section#cadastro {
+    margin-top: 60px;
     display: flex;
     border-radius: 5px;    
     padding: 20px;
