@@ -84,7 +84,8 @@ export const postEditar = async (req, res) => {
                 id: req.params.id
             }
         })
-        res.render('editar.ejs', {toggle: true})
+        
+        res.redirect('/')
     }
     catch(error){
         res.send(error.message)
