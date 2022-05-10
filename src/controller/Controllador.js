@@ -61,7 +61,7 @@ export const getEditar = async (req, res) => {
     try{
         const filmeAtual = await filmes.findByPk(req.params.id)
         res.render('editar.ejs',{
-            filmeAtual
+            filmeAtual, toggle: false
         })
     }
     catch(error){
@@ -84,7 +84,7 @@ export const postEditar = async (req, res) => {
                 id: req.params.id
             }
         })
-        res.redirect('/')
+        res.render('editar.ejs', {toggle: true})
     }
     catch(error){
         res.send(error.message)
