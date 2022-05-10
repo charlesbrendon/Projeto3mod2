@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/71f92ea1b3.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Adcionar Filme</title>
 </head>
 <body>
@@ -62,5 +63,16 @@
     </main>
 
     <%- include('./partials/footer.ejs') %>
+    <% if (toggle) { %>
+      <script>
+        Swal.fire({
+          icon: 'success',
+          title: 'Cadastrado!',
+          text: 'Cadastrado com sucesso!',
+          timer: 2500          
+        })
+        setInterval(() => {window.location.href = '/' }, 2500)
+      </script>    
+    <% } %> 
   </body>
 </html>

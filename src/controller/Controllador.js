@@ -39,7 +39,7 @@ export const getDeletar = async(req, res) => {
 }
 
 export const getCadastro = (req, res) => {
-    res.render('cadastro.ejs')
+    res.render('cadastro.ejs', {toggle: false})
 }
 
 export const postCadastro = async (req, res) =>{
@@ -49,7 +49,7 @@ export const postCadastro = async (req, res) =>{
             res.send('Todos os campos são obrigatórios!')
         }else{
             await filmes.create({nome, diretor, img, duracao, ano, iframe})
-        res.redirect('/')
+        res.render('cadastro.ejs', {toggle: true})
     }
     }
     catch(error){
